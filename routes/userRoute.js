@@ -1,5 +1,5 @@
 import express from "express";
-import { createData } from "../controllers/dataControl";
+import { createData } from "../controllers/dataControl.js";
 
 const movieRoute = express.Router()
 

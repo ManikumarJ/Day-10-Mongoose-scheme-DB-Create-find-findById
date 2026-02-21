@@ -1,5 +1,7 @@
 import userModel from '../models/userModel.js'
 
+
+// CREATE
 export const createData = async (req, res) => {
 
   try {
@@ -18,3 +20,21 @@ export const createData = async (req, res) => {
      res.status(404).json({msg:"Soemthing error",error})
     }
 };
+
+
+//FIND
+export const getData = async(req,res)=>{
+
+    try {
+
+        const getData = await userModel.find();
+       
+        if(getData){
+            return res.status(200).json({myDatas:getData})
+        }
+        
+    } catch (err) {
+         res.status(404).json({msg:"Soemthing error",err})   
+    }
+
+}

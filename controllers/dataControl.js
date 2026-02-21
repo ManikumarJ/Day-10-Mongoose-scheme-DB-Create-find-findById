@@ -22,7 +22,7 @@ export const createData = async (req, res) => {
 };
 
 
-//FIND
+//  find()
 export const getData = async(req,res)=>{
 
     try {
@@ -31,6 +31,24 @@ export const getData = async(req,res)=>{
        
         if(getData){
             return res.status(200).json({myDatas:getData})
+        }
+        
+    } catch (err) {
+         res.status(404).json({msg:"Soemthing error",err})   
+    }
+
+}
+
+// FindById()
+
+export const getById = async(req,res)=>{
+
+    try {
+        const {userid} = req.params
+        const getDataByID = await userModel.findById(userid)
+       
+        if(getDataByID){
+            return res.status(200).json({myDatas:getDataByID})
         }
         
     } catch (err) {

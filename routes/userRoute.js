@@ -12,4 +12,4 @@ export default movieRoute
 
 //  http://localhost:5000/api/movie/create
 //  http://localhost:5000/api/movie/getData
-//  http://localhost:5000/api/movie//getByData/:userid
+//  http://localhost:5000/api/movie/getByData/:userid

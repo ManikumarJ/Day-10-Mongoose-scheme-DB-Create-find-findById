@@ -1,4 +1,4 @@
-import userModel from '../controllers/dataControl.js'
+import userModel from '../models/userModel.js'
 
 export const createData = async (req, res) => {
 

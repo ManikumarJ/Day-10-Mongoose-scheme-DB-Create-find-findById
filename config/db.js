@@ -12,4 +12,4 @@ try {
   
 }
 
-export default connectDB;
+export default DBconnect;
